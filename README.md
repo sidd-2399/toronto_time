@@ -1,5 +1,8 @@
 ﻿# toronto_time
-
+Setting up the Environment:
+1. Make sure MySQL and Go is installed.
+2. Install Go Dependencies such as sql-driver
+   
 Creating a Database and table for storing the data:
 Queries Used:
 1.	To create DB: CREATE DATABASE go_api;
