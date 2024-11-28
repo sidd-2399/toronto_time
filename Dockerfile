@@ -19,7 +19,7 @@ RUN go build -o main .
 # Use a smaller image to run the application
 FROM alpine:latest
 
-# Install necessary dependencies (like certificates for secure connections)
+# Install necessary dependencies
 RUN apk --no-cache add ca-certificates
 
 # Set the working directory inside the container
