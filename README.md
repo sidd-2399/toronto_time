@@ -25,3 +25,15 @@ Verifying if the data has been stored in the DB:
 Query: SELECT * FROM time_log;
  
 ![image](https://github.com/user-attachments/assets/abcb2910-c9be-463b-9ac9-69baaf643f49)
+
+To Dockerize the application:
+
+1. Run the MySQL container using:
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=rootpassword -e MYSQL_DATABASE=go_api -p 3306:3306 -d mysql:8.0
+
+2. Build the dockerimage using the dockerfile
+docker build -t go-api .
+
+3. Run the container using command:
+docker run --name go-api -p 8080:8080 --link mysql:mysql -d go-api
+
